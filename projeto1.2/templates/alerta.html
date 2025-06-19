@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alertas de Preço</title>
+</head>
+<body>
+  <h1>Alertas Ativos</h1>
+  {% if alertas %}
+    <ul>
+    {% for nome, url, preco_atual, preco_desejado in alertas %}
+      <li>
+        <strong>{{ nome }}</strong><br>
+        Preço Atual: R$ {{ preco_atual }}<br>
+        Desejado: R$ {{ preco_desejado }}<br>
+        <a href="{{ url }}" target="_blank">Ver produto</a>
+      </li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <p>Nenhum alerta no momento.</p>
+  {% endif %}
+</body>
+</html>

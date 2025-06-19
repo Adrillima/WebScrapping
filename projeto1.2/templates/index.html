@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Produtos Monitorados</title>
+</head>
+<body>
+  <h1>Produtos Monitorados</h1>
+  <a href="/adicionar">Adicionar Produto</a> | <a href="/alertas">Ver Alertas</a>
+  <ul>
+    {% for produto in produtos %}
+      <li>
+        <strong>{{ produto[1] }}</strong> -
+        <a href="{{ produto[2] }}" target="_blank">Link</a> |
+        <a href="{{ url_for('detalhes', produto_id=produto[0]) }}">Histórico</a>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

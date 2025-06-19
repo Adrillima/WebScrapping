@@ -1,0 +1,5 @@
+flask
+beautifulsoup4
+selenium
+apscheduler
+plotly
